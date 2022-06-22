@@ -13,7 +13,7 @@
   \maketitle
 
 
-  \section{How paragraphs/linefeeds work}
+  \section{How paragraphs/linefeeds work \label{paragraph_sec}}
 
     This is some text.
     This is a new line in my .tex, but a single linefeed doesn't break paragraph.
@@ -23,14 +23,14 @@
     Also, paragraphs are automatically indented. 
 
 
-  \section{Sections}
+  \section{Sections \label{sections_sec}}
 
     Sections are automatically numbered.
 
     You can also have subsections, subsubsections, etc.
 
 
-  \section{Formatting}
+  \section{Formatting \label{formatting_sec}}
 
     This is normal text. 
     \textbf{This is bold text.} 
@@ -40,7 +40,7 @@
     % textit and emph look the same by default but are stylistically different. Use textit for stuff that's always italicized like book titles, latin phrases, etc. Use epmh for anything emphatic. You can redefine what emph does to emphasise text in ways other than italicizing. 
 
 
-    \subsection{Subsection example}
+    \subsection{Subsection example \label{reflab_subsections_sec}}
 
       "This is in quotation marks." If you quote like this, the " character will just be rendered as closing quote on both opening and closing sides. 
 
@@ -48,7 +48,7 @@
       ``This is in proper quotation marks.'' `This is how you do single quotes.'
 
 
-  \section{Lists}
+  \section{Lists \label{lists_sec}}
 
     A numbered list:
     \begin{enumerate}
@@ -59,7 +59,7 @@
       % Doing a sublist
         \begin{enumerate}
           \item Yellow TP
-          \item Blue TP
+          \item Blue TP \label{ref_blue_tp}
         \end{enumerate}
       \item Milk
     \end{enumerate}
@@ -74,6 +74,15 @@
           \item skimmed milk
         \end{itemize}
     \end{itemize}
+  
+
+    \section{Labels and references}
+
+    Here we demonstrate LaTeX's automated section number (and beyond) referencing using labels and references.
+
+    The section on Lists is \ref{lists_sec}. The section on Subsections is \ref{reflab_subsections_sec}.
+
+    Blue TP is item number \ref{ref_blue_tp}. 
 
 
 \end{document}
