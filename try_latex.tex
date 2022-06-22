@@ -42,9 +42,38 @@
 
     \subsection{Subsection example}
 
-    "This is in quotation marks." If you quote like this, the " character will just be rendered as closing quote on both opening and closing sides. 
+      "This is in quotation marks." If you quote like this, the " character will just be rendered as closing quote on both opening and closing sides. 
 
-    To use quotes the right way, use the backtick ` character:
-    ``This is in proper quotation marks.'' `This is how you do single quotes.'
+      To use quotes the right way, use the backtick ` character:
+      ``This is in proper quotation marks.'' `This is how you do single quotes.'
+
+
+  \section{Lists}
+
+    A numbered list:
+    \begin{enumerate}
+      % environment for numbered lists
+      \item Bread
+      \item Butter
+      \item Toilet paper
+      % Doing a sublist
+        \begin{enumerate}
+          \item Yellow TP
+          \item Blue TP
+        \end{enumerate}
+      \item Milk
+    \end{enumerate}
+
+    A non-numbered list:
+    \begin{itemize}
+      \item Bread
+      \item Butter
+      \item Milk
+        \begin{itemize}
+          \item Whole milk 
+          \item skimmed milk
+        \end{itemize}
+    \end{itemize}
+
 
 \end{document}
