@@ -1,5 +1,8 @@
 \documentclass{article}
 
+\usepackage[backend=biber]{biblatex}
+\addbibresource{MNE project SKN.bib}
+
 \author{Shaashwat Saraff}
 
 \title{My first {\LaTeX} document}
@@ -76,7 +79,7 @@
     \end{itemize}
   
 
-    \section{Labels and references}
+  \section{Labels and references}
 
     Here we demonstrate LaTeX's automated section number (and beyond) referencing using labels and references.
 
@@ -84,5 +87,15 @@
 
     Blue TP is item number \ref{ref_blue_tp}. 
 
+  
+  \section{Example place where references are used}
 
+  According to \textcite{catic_aerosol-jet_2020}, AJP works fine. 
+
+  % Flexdym is a block copolymer. \textcite{lachaux_thermoplastic_2017}
+
+  \section{References}
+
+    \printbibliography
+    
 \end{document}
