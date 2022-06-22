@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber, style=vancouver]{biblatex}
 \addbibresource{MNE project SKN.bib}
 
 \author{Shaashwat Saraff}
@@ -90,9 +90,11 @@
   
   \section{Example place where references are used}
 
+  % textcite to do in-text citations naming the author and providing a ref num
   According to \textcite{catic_aerosol-jet_2020}, AJP works fine. 
 
-  % Flexdym is a block copolymer. \textcite{lachaux_thermoplastic_2017}
+  % parencite to just cite with a number at the end of the sentence, without naming author
+  Flexdym is a block copolymer. \parencite{lachaux_thermoplastic_2017}
 
   \section{References}
 
