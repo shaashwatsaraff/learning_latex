@@ -3,6 +3,10 @@
 \usepackage[backend=biber, style=vancouver]{biblatex}
 \addbibresource{MNE project SKN.bib}
 
+\usepackage{graphicx}
+
+\usepackage[]{blindtext}
+
 \author{Shaashwat Saraff}
 
 \title{My first {\LaTeX} document}
@@ -83,12 +87,40 @@
 
     Here we demonstrate LaTeX's automated section number (and beyond) referencing using labels and references.
 
-    The section on Lists is \ref{lists_sec}. The section on Subsections is \ref{reflab_subsections_sec}.
+    The section on Lists is \ref{lists_sec}. The section on Subsections is \ref{reflab_subsections_sec}. The figures section is \ref{ref_sec_figures}.
 
     Blue TP is item number \ref{ref_blue_tp}. 
 
+    The Arch Logo is in Figure \ref{ref_fig_archlogo}.
+
   
-  \section{Example place where references are used}
+  \section{Figures \label{ref_sec_figures}}
+
+    Here we discuss how to include figures/images in \LaTeX{} and how to refer to them in text.
+
+    \begin{center}
+      \includegraphics[width=3in, height=3in, keepaspectratio]{figures/archlinux-logo-with-text.png}
+      % could also use e.g. width=0.7\textwidth to set it to 70% of whatever the width of a text line is
+    \end{center}
+
+
+    % including some lorem ipsum to fill text
+    \blindtext
+
+    % This time we include the image in a figure
+  
+    \begin{figure}[h]
+      % [h] = here, wherever you declare it in the text 
+      % [p] = fig on its own page; [t]: top of page; [b]: bottom of page
+      \begin{center}
+        \includegraphics[width=0.5\textwidth]{figures/archlinux-logo-with-text.png}
+
+        \caption{Arch Linux logo \label{ref_fig_archlogo}}
+      \end{center}
+    \end{figure}
+
+  
+  \section{Example place where bibliography references are used}
 
   % textcite to do in-text citations naming the author and providing a ref num
   According to \textcite{catic_aerosol-jet_2020}, AJP works fine. 
@@ -96,7 +128,7 @@
   % parencite to just cite with a number at the end of the sentence, without naming author
   Flexdym is a block copolymer. \parencite{lachaux_thermoplastic_2017}
 
-  \section{References}
+  \section{References (bibliography)}
 
     \printbibliography
     
